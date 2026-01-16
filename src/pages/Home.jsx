@@ -4,42 +4,42 @@ const animations = [
   {
     title: "GSAP To",
     description:
-      "The to() method is used to animate a single element from a starting state to an ending state.",
+      "El método to() se usa para animar un elemento desde su estado inicial a un estado final.",
     path: "/gsapto",
   },
   {
     title: "GSAP From",
     description:
-      "The from() method is used to animate a single element from an ending state to a starting state.",
+      "El método from() se usa para animar un elemento desde un estado final a su estado inicial.",
     path: "/gsapfrom",
   },
   {
     title: "GSAP FromTo",
     description:
-      "The fromTo() method is used to animate a single element from a starting state to an ending state and vice versa.",
+      "El método fromTo() se usa para animar un elemento desde un estado inicial a un estado final y viceversa.",
     path: "/gsapfromto",
   },
   {
     title: "GSAP Timeline",
     description:
-      "The timeline() method is used to create a timeline to manage multiple animations.",
+      "El método timeline() se usa para crear una línea temporal para gestionar múltiples animaciones.",
     path: "/gsaptimeline",
   },
   {
     title: "GSAP Stagger",
     description:
-      "The stagger() method is used to animate multiple elements with a stagger effect.",
+      "El método stagger() se usa para animar múltiples elementos con un efecto escalonado.",
     path: "/gsapstagger",
   },
   {
     title: "GSAP ScrollTrigger",
     description:
-      "The ScrollTrigger plugin is used to trigger animations based on the scroll position.",
+      "El plugin ScrollTrigger se usa para activar animaciones según la posición del scroll.",
     path: "/gsapscrolltrigger",
   },
   {
     title: "GSAP Text",
-    description: "Learn how to animate text with GSAP.",
+    description: "Aprende cómo animar texto con GSAP.",
     path: "/gsaptext",
   },
 ];
@@ -48,7 +48,7 @@ const Home = () => {
   return (
     <main className="container">
       <div className="flex flex-col">
-        <h1 className="text-3xl font-bold text-zinc-50">GSAP Animations</h1>
+        <h1 className="text-3xl font-bold text-zinc-50">Animaciones GSAP</h1>
         <ol className="flex flex-col mt-10">
           {animations.map((animation, index) => (
             <li

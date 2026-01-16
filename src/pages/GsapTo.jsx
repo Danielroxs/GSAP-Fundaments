@@ -10,7 +10,7 @@ const GsapTo = () => {
       yoyo: true,
       rotation: 360,
       duration: 2,
-      ease: "bounce.easeIn",
+      ease: "elastic",
     });
   }, []);
 
@@ -19,27 +19,27 @@ const GsapTo = () => {
       <h1>GsapTo</h1>
 
       <p className="mt-5 text-gray-500">
-        The <code>gsap.to()</code> method is used to animate elements from their
-        current state to a new state.
+        El método <code>gsap.to()</code> se utiliza para animar elementos desde
+        su estado actual a un nuevo estado.
       </p>
       <p className="mt-5 text-gray-500">
-        The <code>gsap.to()</code> method is similar to the{" "}
-        <code>gsap.from()</code> method, but the difference is that the{" "}
-        <code>gsap.to()</code> method animates elements from their current state
-        to a new state, while the <code>gsap.from()</code> method animates
-        elements from a new state to their current state.
+        El método <code>gsap.to()</code> es similar al método{" "}
+        <code>gsap.from()</code>, pero la diferencia es que el método{" "}
+        <code>gsap.to()</code> anima elementos desde su estado actual a un nuevo
+        estado, mientras que el método <code>gsap.from()</code> anima elementos
+        desde un nuevo estado a su estado actual.
       </p>
 
       <p className="mt-5 text-gray-500">
-        Read more about the{" "}
+        Lee más sobre el método{" "}
         <a
           href="https://greensock.com/docs/v3/GSAP/gsap.to()"
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
           gsap.to()
-        </a>{" "}
-        method.
+        </a>
+        .
       </p>
 
       <div className="mt-20">

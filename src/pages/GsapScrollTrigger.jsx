@@ -14,6 +14,25 @@ const GsapScrollTrigger = () => {
       const boxes = gsap.utils.toArray(scrollRef.current.children);
 
       boxes.forEach((box) => {
+        // Tienes 2 cajas:
+        //
+        // Caja 1 (la primera):
+        // - Su número de orden es 0
+        // - 0 + 5 = 5
+        // - 5 × 150 = 750 pixeles hacia la derecha
+        //
+        // Caja 2 (la segunda):
+        // - Su número de orden es 1
+        // - 1 + 5 = 6
+        // - 6 × 150 = 900 pixeles hacia la derecha
+        //
+        // Inicio:
+        // [Caja1] [Caja2]
+        //
+        // Después del scroll:
+        //                               [Caja1] ← se movió 750px
+        //                                     [Caja2] ← se movió 900px (más lejos)
+
         gsap.to(box, {
           x: 150 * (boxes.indexOf(box) + 5),
           rotation: 360,
@@ -22,14 +41,14 @@ const GsapScrollTrigger = () => {
           scrollTrigger: {
             trigger: box,
             start: "bottom bottom",
-            end: "top 10%",
+            end: "top 20%",
             scrub: true,
           },
           ease: "power1.inOut",
         });
       });
     },
-    { scope: scrollRef }
+    { scope: scrollRef },
   );
 
   return (
@@ -37,33 +56,61 @@ const GsapScrollTrigger = () => {
       <h1>GsapScrollTrigger</h1>
 
       <p className="mt-5 text-gray-500">
-        Gsap Scroll Trigger is a plugin that allows you to create animations
-        that are triggered by the scroll position of the page.
+        Gsap Scroll Trigger es un plugin que te permite crear animaciones que se
+        activan según la posición del scroll de la página.
       </p>
 
       <p className="mt-5 text-gray-500">
-        With ScrollTrigger, you can define various actions to be triggered at
-        specific scroll points, such as starting or ending an animation,
-        scrubbing through animations as the user scrolls, pinning elements to
-        the screen, and more.{" "}
+        Con ScrollTrigger, puedes definir varias acciones que se activan en
+        puntos específicos del scroll, como iniciar o finalizar una animación,
+        vincular animaciones al movimiento del scroll del usuario, fijar
+        elementos a la pantalla y más.{" "}
       </p>
 
       <p className="mt-5 text-gray-500">
-        Read more about the{" "}
+        Lee más sobre el método{" "}
         <a
           href="https://gsap.com/docs/v3/Plugins/ScrollTrigger/"
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
           gsap scroll trigger
-        </a>{" "}
-        method.
+        </a>
+        .
       </p>
+
+      <div className="mt-10 p-5 bg-gray-800 rounded-lg">
+        <h3 className="text-white font-bold mb-3">
+          📦 Explicación del movimiento:
+        </h3>
+        <pre className="text-gray-300 text-sm">
+          {`Tienes 2 cajas:
+
+            Caja 1 (la primera):
+            - Su número de orden es 0
+            - 0 + 5 = 5
+            - 5 × 150 = 750 pixeles hacia la derecha
+
+            Caja 2 (la segunda):
+            - Su número de orden es 1  
+            - 1 + 5 = 6
+            - 6 × 150 = 900 pixeles hacia la derecha
+
+            Inicio:
+            [Caja1] [Caja2]
+
+            Después del scroll:
+                                          [Caja1] ← se movió 750px
+                                                [Caja2] ← se movió 900px (más lejos)`}
+        </pre>
+      </div>
 
       <div className="w-full h-[70vh] flex justify-center items-center flex-col">
         <p className="text-center text-gray-500">
-          Scroll down to see the animation
+          Desplázate hacia abajo para ver la animación
         </p>
+
+        <p className="text-center text-gray-500"></p>
 
         <svg
           className="animate-bounce mt-5"

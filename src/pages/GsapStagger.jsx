@@ -26,28 +26,29 @@ const GsapStagger = () => {
       <h1>GsapStagger</h1>
 
       <p className="mt-5 text-gray-500">
-        GSAP stagger is a feature that allows you to apply animations with a
-        staggered delay to a group of elements.
+        GSAP stagger es una característica que te permite aplicar animaciones
+        con un retraso escalonado a un grupo de elementos.
       </p>
 
       <p className="mt-5 text-gray-500">
-        By using the stagger feature in GSAP, you can specify the amount of time
-        to stagger the animations between each element, as well as customize the
-        easing and duration of each individual animation. This enables you to
-        create dynamic and visually appealing effects, such as staggered fades,
-        rotations, movements, and more.
+        Al usar la característica stagger en GSAP, puedes especificar la
+        cantidad de tiempo para escalonar las animaciones entre cada elemento,
+        así como personalizar la aceleración y duración de cada animación
+        individual. Esto te permite crear efectos dinámicos y visualmente
+        atractivos, como desvanecimientos escalonados, rotaciones, movimientos y
+        más.
       </p>
 
       <p className="mt-5 text-gray-500">
-        Read more about the{" "}
+        Lee más sobre la característica{" "}
         <a
           href="https://gsap.com/resources/getting-started/Staggers"
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
           Gsap Stagger
-        </a>{" "}
-        feature.
+        </a>
+        .
       </p>
 
       <div className="mt-20">

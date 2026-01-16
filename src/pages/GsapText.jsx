@@ -20,7 +20,7 @@ const GsapText = () => {
         y: 0,
         delay: 1,
         stagger: 0.1,
-      }
+      },
     );
   }, []);
 
@@ -31,32 +31,33 @@ const GsapText = () => {
       </h1>
 
       <p className="mt-5 text-gray-500 para">
-        We can use same method like <code>gsap.to()</code>,{" "}
-        <code>gsap.from()</code>, <code>gsap.fromTo()</code> and{" "}
-        <code>gsap.timeline()</code> to animate text.
+        Podemos usar los mismos métodos como <code>gsap.to()</code>,{" "}
+        <code>gsap.from()</code>, <code>gsap.fromTo()</code> y{" "}
+        <code>gsap.timeline()</code> para animar texto.
       </p>
 
       <p className="mt-5 text-gray-500 para">
-        Using these methods we can achieve various text animations and effects
-        like fade in, fade out, slide in, slide out, and many more.
+        Usando estos métodos podemos lograr varias animaciones y efectos de
+        texto como aparecer gradualmente, desaparecer gradualmente, deslizar
+        hacia dentro, deslizar hacia fuera y muchos más.
       </p>
 
       <p className="mt-5 text-gray-500 para">
-        For more advanced text animations and effects, you can explore the GSAP
-        TextPlugin or other third-party libraries that specialize in text
-        animations.
+        Para animaciones y efectos de texto más avanzados, puedes explorar el
+        TextPlugin de GSAP u otras bibliotecas de terceros que se especializan
+        en animaciones de texto.
       </p>
 
       <p className="mt-5 text-gray-500 para">
-        Read more about the{" "}
+        Lee más sobre el plugin{" "}
         <a
           href="https://greensock.com/docs/v3/Plugins/TextPlugin"
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
           TextPlugin
-        </a>{" "}
-        plugin.
+        </a>
+        .
       </p>
     </main>
   );
